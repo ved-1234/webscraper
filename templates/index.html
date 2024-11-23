@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompareHub</title>
+    <link rel="shortcut icon" href="./static/logo.ico" type="image/x-icon">
+    <style>
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-image: url('../static/copy2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+  }
+
+
+header {
+    background-color: #0078b7;
+    height: 80px;
+    color: #fff;
+
+    padding: 20px;
+
+}
+
+header h1 {
+    font-family:monospace ;
+    padding-top: 15px;
+    text-align: left;
+    font-size: 49px;
+}
+
+
+.search input[type=text] {
+    float: right;
+    padding: 6px;
+    border:none;
+
+    margin-top: -18px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+
+.categ {
+    height: 40px;
+}
+nav ul
+{
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+nav li {
+    margin: 10px auto;
+    padding-left:35px ;
+    display: inline;
+    margin-left: 50px;
+
+}
+
+.img {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+.PSearch{
+
+    margin-top: 8%;
+    margin-left: 24%;
+
+}
+
+.First {
+    width: 40%;
+    height: 60px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+    font-family: arial;
+    letter-spacing: .5px;
+    font-size: 16px;
+    line-height: 60px;
+    padding: 3px 60px 0 80px;
+
+}
+
+.Fourth {
+    width: 40%;
+    margin-left: -25%;
+    height: 60px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+    font-family: arial;
+    letter-spacing: .5px;
+    font-size: 16px;
+    line-height: 60px;
+    padding: 3px 60px 0 80px;
+}
+.Second {
+   margin-left: -25%;
+    width: 40%;
+    height: 60px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+    font-family: arial;
+    letter-spacing: .5px;
+    font-size: 16px;
+    line-height: 60px;
+    padding: 3px 60px 0 80px;
+}
+
+.two {
+
+
+margin-top: 3%;
+
+}
+
+.Third {
+
+    width: 40%;
+    height: 60px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+    font-family: arial;
+    letter-spacing: .5px;
+    font-size: 16px;
+    line-height: 60px;
+    padding: 3px 60px 0 80px;
+}
+
+
+
+.compare-button {
+    width: 170px;
+    height: 40px;
+    padding: 0;
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 44px;
+
+
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto;
+
+    margin-top: 2.5%;
+    cursor: pointer;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item:not(.active)::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: red;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+}
+
+/* Show the red box on hover */
+.nav-item:hover::after {
+    opacity: 1;
+}
+
+
+/* Style the red box for the "active" class */
+.nav-item.active {
+    position: relative;
+}
+
+.nav-item.active::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px; /* Adjust the height as needed */
+    background-color: red; /* Red color */
+    opacity: 1; /* Initially visible for the "active" item */
+}
+
+
+footer {
+
+    margin-top: 9.15%;
+    background-color: #3e3e3e;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* CSS for suggestion dropdowns */
+.suggestion-dropdown {
+    position: absolute;
+   width: 24%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1;
+     font-family: sans-serif;
+}
+
+/* Adjust the top property to position the suggestion dropdown below the input field */
+.suggestion-dropdown.above {
+    top: -1000px; /* Adjust the value to control the dropdown position */
+}
+
+/* Additional styling for suggestion items */
+.suggestion-item {
+
+    padding: 5px;
+    cursor: pointer;
+
+}
+
+/* Highlight suggestion items on hover */
+.suggestion-item:hover {
+    background-color: #f5f5f5;
+}
+/* Style for the 'line' div, which groups two input fields in the same line */
+.line {
+    display: flex; /* Use flexbox to arrange items in a row */
+    justify-content: space-between; /* Space evenly between the two input fields */
+    margin-bottom: 10px; /* Add spacing between lines */
+}
+
+/* Style for the 'one' and 'two' divs, which contain input fields and suggestion dropdowns */
+.one, .two {
+    flex: 1; /* Equal width for both 'one' and 'two' divs */
+    margin-right: 10px; /* Add spacing between input fields */
+}
+#laptop2Suggestions, #laptop4Suggestions {
+    left: 52.7%; /* Move the suggestion boxes to the left */
+    right: auto; /* Reset any right positioning */
+}
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>CompareHub.com</h1>
+       <!-- <div class="search">
+        <input class="search" type="text" placeholder="Gadgets Search..">
+    </div> -->
+
+    </header>
+
+
+
+
+    <main>
+        <div class="categ">
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}" class="nav-item active" data-target="laptop"><img class="img" src="/static/laptop.png" alt="Laptop"></a></li>
+                    <li><a href="/mob.html" class="nav-item" data-target="mobile"><img class="img" src="../static/smartphone-call.png" alt="Mobile"></a></li>
+                    <li><a href="/tab.html" class="nav-item" data-target="tablet"><img class="img" src="../static/tablet.png" alt="Tablet"></a></li>
+
+
+                </ul>
+            </nav>
+        </div>
+
+<div class="PSearch">
+    <div class="line">
+        <div class="one">
+            <input class="First" maxlength="100" type="text" placeholder="Enter name of laptop" id="laptop1">
+            <div class="suggestion-dropdown" id="laptop1Suggestions"></div>
+        </div>
+
+        <div class="one">
+            <input class="Second" maxlength="100" type="text" placeholder="Enter name of laptop" id="laptop2">
+            <div class="suggestion-dropdown" id="laptop2Suggestions"></div>
+        </div>
+    </div>
+
+    <div class="line">
+        <div class="two">
+            <input class="Third" maxlength="100" type="text" placeholder="Enter name of laptop" id="laptop3">
+            <div  class="suggestion-dropdown" id="laptop3Suggestions"></div>
+        </div>
+
+        <div class="two">
+            <input class="Fourth" maxlength="100" type="text" placeholder="Enter name of laptop" id="laptop4">
+         <div class="suggestion-dropdown" id="laptop4Suggestions"></div>
+        </div>
+    </div>
+</div>
+
+
+
+         <button class="compare-button" onclick="compareLaptops()">Compare</button>
+
+   </main>
+   <footer>
+    <p>&copy; Copyright CompareHub Limited 2023. All rights reserved.</p>
+</footer>
+
+
+<script >
+
+ const inputElements = [
+            document.getElementById('laptop1'),
+            document.getElementById('laptop2'),
+            document.getElementById('laptop3'),
+            document.getElementById('laptop4')
+        ];
+
+        const suggestionDropdowns = [
+            document.getElementById('laptop1Suggestions'),
+            document.getElementById('laptop2Suggestions'),
+            document.getElementById('laptop3Suggestions'),
+            document.getElementById('laptop4Suggestions')
+        ];
+
+        // Event listener for user input in each laptop input field
+        inputElements.forEach((inputElement, index) => {
+            inputElement.addEventListener('input', function() {
+                const userInput = inputElement.value;
+
+                // Make an AJAX request to fetch laptop suggestions
+                fetch(`/get_laptop_suggestions?input=${userInput}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Clear existing suggestions
+                        suggestionDropdowns[index].innerHTML = '';
+
+                        // Populate the suggestion dropdown with new suggestions
+                        data.suggestions.forEach(suggestion => {
+                            const suggestionItem = document.createElement('div');
+                            suggestionItem.textContent = suggestion;
+                            suggestionItem.classList.add('suggestion-item');
+                            suggestionDropdowns[index].appendChild(suggestionItem);
+
+                            // Add click event listener to populate the input with the selected suggestion
+                            suggestionItem.addEventListener('click', function() {
+                                inputElement.value = suggestion;
+                                suggestionDropdowns[index].innerHTML = ''; // Clear suggestions
+                            });
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error fetching suggestions:', error);
+                    });
+            });
+        });
+
+function compareLaptops() {
+
+    // Get the values of the laptop names entered by the user
+    const laptop1Name = document.querySelector('.First').value;
+    const laptop2Name = document.querySelector('.Second').value;
+    const laptop3Name = document.querySelector('.Third').value; // Update laptop3Name
+    const laptop4Name = document.querySelector('.Fourth').value; // Update laptop4Name
+
+
+      console.log('laptop1Name:', laptop1Name);
+    console.log('laptop2Name:', laptop2Name);
+    console.log('laptop3Name:', laptop3Name);
+    console.log('laptop4Name:', laptop4Name);
+
+    // Check the number of laptops entered
+    if (laptop1Name && laptop2Name && !laptop3Name && !laptop4Name) {
+        // Redirect to the comparison page for 2 laptops with laptop1 and laptop2 names as query parameters
+        window.location.href = `compare2L.html?laptop1=${laptop1Name}&laptop2=${laptop2Name}`;
+    } else if (laptop1Name && laptop2Name && laptop3Name && !laptop4Name) {
+        // Redirect to the comparison page for 3 laptops with laptop1, laptop2, and laptop3 names as query parameters
+        window.location.href = `compare3L.html?laptop1=${laptop1Name}&laptop2=${laptop2Name}&laptop3=${laptop3Name}`;
+    } else if (laptop1Name && laptop2Name && laptop3Name && laptop4Name) {
+        // Redirect to the comparison page for 4 laptops with laptop1, laptop2, laptop3, and laptop4 names as query parameters
+        window.location.href = `compare4L.html?laptop1=${laptop1Name}&laptop2=${laptop2Name}&laptop3=${laptop3Name}&laptop4=${laptop4Name}`;
+    } else {
+        // Handle the case when no laptops are entered or other conditions
+        alert('Please enter at least two and up to four laptop names for comparison.');
+    }
+}
+
+
+</script>
+</body>
+</html>

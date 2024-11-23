@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompareHub</title>
+    <link rel="shortcut icon" href="./static/logo.ico" type="image/x-icon">
+    <style>
+        
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #0078b7;
+    height: 80px;
+    color: #fff;
+   
+    padding: 20px;
+    
+}
+
+header h1 {
+    font-family:monospace ;
+    padding-top: 15px;
+    text-align: left;
+    font-size: 49px;
+}
+
+
+.search input[type=text] {
+    float: right;
+    padding: 6px;
+    border:none;
+    
+    margin-top: -18px;
+    margin-right: 16px;
+    font-size: 17px;
+  
+  }
+
+footer {
+
+    margin-top: 9.15%;
+    background-color:#4b4949;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.gs{
+   
+    margin-left: 90px;
+    margin-top: 90px;
+   
+ 
+    width: 16%;
+    height: 16%;
+    padding: 10px 10px 10px 10px;
+}
+
+._wgt-pdtl {
+    margin-left: 35%;
+   margin-top: -15%;
+    width: 40%;
+   border-radius: 30px;
+   border: solid 10px;
+    border-color: #bbbbbb;
+
+    background-color: #fff;
+ 
+}
+
+._flx {
+    display: flex;
+}
+._pdswrp {
+    width: 100%;
+}
+
+._pdswrp ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+ol, ul {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+    padding-left: 65px;
+    padding-right: 30px;
+    padding-top: 20px;
+}
+
+
+._pdswrp li {
+    width: 33.3%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  
+    
+    align-items: flex-start;
+}
+._flx {
+    display: flex;
+}
+
+._pdswrp li ._thumb {
+    width: 28px;
+    height: 28px;
+    flex: none;
+}
+
+
+._pdswrp li img {
+    max-width: 28px;
+    max-height: 28px;
+    opacity: .8;
+}
+._pdswrp ._pdsd {
+    width: calc(100% - 50px);
+    margin-left: 8px;
+}
+
+._pdswrp ._pdsd ._ttl {
+    font-size: 13px;
+    color: var(--color2);
+    font-weight: 400;
+    margin: 0 0 3px 0;
+}
+._pdswrp ._pdsd ._ttl, ._pdswrp ._pdsd ._vltxt {
+    display: block;
+    letter-spacing: .2px;
+    line-height: 16px;
+}
+
+
+._pdswrp ._pdsd ._vltxt {
+    font-size: 15px;
+    line-height: 20px;
+    color: var(--color);
+}
+._pdswrp ._pdsd ._ttl, ._pdswrp ._pdsd ._vltxt {
+    display: block;
+    letter-spacing: .2px;
+    line-height: 16px;
+}
+
+
+
+table{
+    margin-top: 8%;
+    margin-left: 19.2%;
+    margin-right: 20%;
+    width: 60%;
+    height: 100%;
+}
+
+
+
+
+table{
+
+    border-collapse:collapse;
+    text-align:center;
+font-family: sans-serif;
+font-weight: 400;
+}
+
+
+.hed{font-family: Titillium,sans-serif;
+    padding-left: 7px;
+    padding-top: 5px;
+
+    background-color: #f1f1f1;
+    color: #cb3a27;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+  border: solid;
+    border-width: 1px 1px ;
+    width: 100%;
+    text-align: left;
+    border-color: rgb(207, 207, 207);
+    text-transform: capitalize;
+    background-color: #f1f1f1;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.spec{
+    text-align: left;
+    font-size: 16px;
+    padding-top:5px ;
+    padding-bottom: 5px;
+    width:10%;
+    padding-left: 7px;
+
+}
+
+td{
+    padding-top: 18px;
+    padding-bottom: 18px;
+    width: 27%;
+   border-color: #c9c9c9;
+}
+    </style>
+ 
+</head>
+<body>
+    <header>
+        <h1>CompareHub.com</h1>
+        <div class="search">
+        <input class="search" type="text" placeholder="Gadgets Search..">
+    </div>
+
+    </header>
+
+
+    
+
+    <main>
+  <div class="full">
+
+    <img class="gs" src="https://images.hindustantimes.com/tech/htmobile4/P151659/heroimage/asus-x515ja-bq322ws-151659-v1-large-1.jpg?impolicy=new-ht-20210112&width=500&height=500">
+        <div class="_wgt-pdtl">
+            <div class="_flx _pdspc" id="overview">
+                <div class="_pdswrp">
+    <ul>
+                    <li class="_flx">
+                                    <div class="_thumb">
+                    <img src="../static/screen.png" alt="Display size" title="Display size" width="25" height="25">
+                </div>
+                                    <div class="_pdsd">
+                    <span class="_ttl">Display size</span>
+                    <span class="_vltxt">15.60-inch</span>
+                </div>
+            </li>
+                            <li class="_flx">
+                                    <div class="_thumb">
+                    <img src="../static/screen.png" alt="Display resolution" title="Display resolution" width="25" height="25">
+                </div>
+                                    <div class="_pdsd">
+                    <span class="_ttl">Display resolution</span>
+                    <span class="_vltxt">1920x1080 pixels</span>
+                </div>
+            </li>
+                            <li class="_flx">
+                                    <div class="_thumb">
+                    <img src="../static/touchscreen.png" alt="Touchscreen" title="Touchscreen" width="25" height="25">
+                </div>
+                                    <div class="_pdsd">
+                    <span class="_ttl">Touchscreen</span>
+                    <span class="_vltxt">No</span>
+                </div>
+            </li>
+                            <li class="_flx">
+                                    <div class="_thumb">
+                    <img src="../static/procesor.png" alt="Processor" title="Processor" width="25" height="25">
+                </div>
+                                    <div class="_pdsd">
+                    <span class="_ttl">Processor</span>
+                    <span class="_vltxt">Ryzen</span>
+                </div>
+            </li>
+                            <li class="_flx">
+                                    <div class="_thumb">
+                    <img src="../static/ram.png" alt="RAM" title="RAM" width="25" height="25">
+
+                </div>
+                                    <div class="_pdsd">
+                    <span class="_ttl">RAM</span>
+                    <span class="_vltxt">8GB</span>
+                </div>
+            </li>
+                            <li class="_flx">
+                                    <div class="_thumb">
+                    <img src="https://cdn.gadgets360.com/content/assets/product-key-specs/os.png" alt="OS" title="OS" width="25" height="25">
+                </div>
+                                    <div class="_pdsd">
+                    <span class="_ttl">OS</span>
+                    <span class="_vltxt">Windows 11</span>
+                </div>
+            </li>
+                            <li class="_flx">
+                                    <div class="_thumb">
+                    <img src="../static/storage.png" alt="SSD" title="SSD" width="25" height="25">
+                </div>
+                                    <div class="_pdsd">
+                    <span class="_ttl">SSD</span>
+                    <span class="_vltxt">512GB</span>
+                </div>
+            </li>
+                            <li class="_flx">
+                                    <div class="_thumb">
+                    <img src="../static/resolutions.png" alt="Weight" title="Weight" width="25" height="25">
+                </div>
+                                    <div class="_pdsd">
+                    <span class="_ttl">Weight</span>
+                    <span class="_vltxt">1.69 kg</span>
+                </div>
+            </li>
+
+            <li class="_flx">
+                <div class="_thumb">
+<img src="../static/rupee.png" alt="../static/Price" title="Price" width="37" height="37">
+</div>
+                <div class="_pdsd">
+<span class="_ttl">Price</span>
+<span class="_vltxt">₹20,000</span>
+</div>
+</li>
+
+
+                </ul>
+</div>                </div>
+        </div>
+
+  </div>
+    </div>
+    
+
+    <table border="1">
+
+        <tr class="general-info-row">
+            <td colspan="2" class="hed">General Info</td>
+        </tr>
+        <!-- General Info rows -->
+        <tr class="general-info-row">
+            <td class="spec">Brand</td>
+            <td>{{ laptop_data[0][1] }}</td>
+
+        </tr>
+        <tr class="general-info-row">
+            <td class="spec">Model</td>
+            <td>{{ laptop_data[0][2] }}</td>
+            
+        </tr>
+
+        <tr class="general-info-row">
+        <td class="spec">Colors</td>
+        <td>{{ laptop_data[0][3] }}</td>
+        </tr>
+
+         <tr class="general-info-row">
+
+            <td class="spec">Thickness</td>
+             <td>{{ laptop_data[0][4] }}</td>
+        </tr>
+         <tr class="general-info-row">
+             <td class="spec">Weight</td>
+             <td>{{ laptop_data[0][5] }}</td>
+
+        </tr>
+         <tr class="general-info-row">
+        <td class="spec">Operating System</td>
+             <td>{{ laptop_data[0][6] }}</td>
+        </tr>
+         <tr class="general-info-row">
+        <td class="spec">Operating System Type</td>
+             <td>{{ laptop_data[0][7] }}</td>
+        </tr>
+
+
+        <tr class="storage-row">
+                <td colspan="2" class="hed">Storage</td>
+
+        </tr>
+
+        <tr class="storage-row">
+            <td class="spec">SSD Capacity</td>
+            <td>{{ laptop_data[0][8] }}</td>
+        </tr>
+
+        <tr class="memory-row">
+            <td colspan="2" class="hed">Memory</td>
+
+        </tr>
+
+        <tr class="memory-row">
+            <td class="spec">RAM</td>
+            <td>{{ laptop_data[0][9] }}</td>
+        </tr>
+
+        <tr class="memory-row">
+    <td class="spec">RAM Type</td>
+    <td>{{ laptop_data[0][10] }}</td>
+</tr>
+<tr class="memory-row">
+    <td class="spec">Memory Slots</td>
+    <td>{{ laptop_data[0][11] }}</td>
+</tr>
+<tr class="memory-row">
+    <td class="spec">Expandable Memory</td>
+    <td>{{ laptop_data[0][12] }}</td>
+</tr>
+<tr class="memory-row">
+    <td class="spec">Memory Layouts</td>
+    <td>{{ laptop_data[0][13] }}</td>
+</tr>
+<tr class="memory-row">
+    <td class="spec">Capacity</td>
+    <td>{{ laptop_data[0][14] }}</td>
+</tr>
+
+        <tr class="processor-row">
+    <td colspan="2" class="hed">Processor</td>
+</tr>
+<tr class="processor-row">
+    <td class="spec">Processor</td>
+    <td>{{ laptop_data[0][15] }}</td>
+</tr>
+<tr class="processor-row">
+    <td class="spec">Graphic Processor</td>
+    <td>{{ laptop_data[0][16] }}</td>
+</tr>
+<tr class="processor-row">
+    <td class="spec">Clockspeed</td>
+    <td>{{ laptop_data[0][17] }}</td>
+</tr>
+ <tr class="battery-row">
+    <td colspan="2" class="hed">Battery</td>
+</tr>
+<tr class="battery-row">
+    <td class="spec">Battery Type</td>
+    <td>{{ laptop_data[0][18] }}</td>
+</tr>
+<tr class="battery-row">
+    <td class="spec">Battery Cell</td>
+    <td>{{ laptop_data[0][19] }}</td>
+</tr>
+<tr class="battery-row">
+    <td class="spec">Power Supply</td>
+    <td>{{ laptop_data[0][20] }}</td>
+</tr>
+ <tr class="display-row">
+    <td colspan="2" class="hed">Display Details</td>
+</tr>
+<tr class="display-row">
+    <td class="spec">Display Touchscreen</td>
+    <td>{{ laptop_data[0][21] }}</td>
+</tr>
+<tr class="display-row">
+    <td class="spec">Pixel Density</td>
+    <td>{{ laptop_data[0][22] }}</td>
+</tr>
+<tr class="display-row">
+    <td class="spec">Display Size</td>
+    <td>{{ laptop_data[0][23] }}</td>
+</tr>
+<tr class="display-row">
+    <td class="spec">Display Features</td>
+    <td>{{ laptop_data[0][24] }}</td>
+</tr>
+<tr class="display-row">
+    <td class="spec">Display Resolution</td>
+    <td>{{ laptop_data[0][25] }}</td>
+</tr>
+<tr class="display-row">
+    <td class="spec">Display Type</td>
+    <td>{{ laptop_data[0][26] }}</td>
+</tr>
+ <tr class="multimedia-row">
+    <td colspan="2" class="hed">Multimedia</td>
+</tr>
+<tr class="multimedia-row">
+    <td class="spec">Sound Technologies</td>
+    <td>{{ laptop_data[0][27] }}</td>
+</tr>
+<tr class="multimedia-row">
+    <td class="spec">Video Recording</td>
+    <td>{{ laptop_data[0][28] }}</td>
+</tr>
+<tr class="multimedia-row">
+    <td class="spec">Speakers</td>
+    <td>{{ laptop_data[0][29] }}</td>
+</tr>
+<tr class="multimedia-row">
+    <td class="spec">Microphone Type</td>
+    <td>{{ laptop_data[0][30] }}</td>
+</tr>
+<tr class="multimedia-row">
+    <td class="spec">Webcam</td>
+    <td>{{ laptop_data[0][31] }}</td>
+</tr>
+<tr class="multimedia-row">
+    <td class="spec">Inbuilt Microphone</td>
+    <td>{{ laptop_data[0][32] }}</td>
+</tr>
+ <tr class="networking-row">
+    <td colspan="2" class="hed">Networking</td>
+</tr>
+<tr class="networking-row">
+    <td class="spec">Wireless LAN</td>
+    <td>{{ laptop_data[0][33] }}</td>
+</tr>
+<tr class="networking-row">
+    <td class="spec">Bluetooth Version</td>
+    <td>{{ laptop_data[0][34] }}</td>
+</tr>
+<tr class="networking-row">
+    <td class="spec">Bluetooth</td>
+    <td>{{ laptop_data[0][35] }}</td>
+</tr>
+ <tr class="others-row">
+    <td colspan="2" class="hed">Others</td>
+</tr>
+<tr class="others-row">
+    <td class="spec">Sales Package</td>
+    <td>{{ laptop_data[0][36] }}</td>
+</tr>
+<tr class="others-row">
+    <td class="spec">Warranty</td>
+    <td>{{ laptop_data[0][37] }}</td>
+</tr>
+ <tr class="peripheral-row">
+    <td colspan="2" class="hed">Peripheral</td>
+</tr>
+<tr class="peripheral-row">
+    <td class="spec">Fingerprint Scanner</td>
+    <td>{{ laptop_data[0][38] }}</td>
+</tr>
+<tr class="peripheral-row">
+    <td class="spec">Keyboard</td>
+    <td>{{ laptop_data[0][39] }}</td>
+</tr>
+
+ <tr class="ports-row">
+    <td colspan="2" class="hed">Ports</td>
+</tr>
+<tr class="ports-row">
+    <td class="spec">Headphone Jack</td>
+    <td>{{ laptop_data[0][40] }}</td>
+</tr>
+<tr class="ports-row">
+    <td class="spec">Microphone Jack</td>
+    <td>{{ laptop_data[0][41] }}</td>
+</tr>
+
+
+    </table>
+        
+   </main>
+   <footer>
+    <p>&copy; Copyright CompareHub Limited 2023. All rights reserved.</p>
+</footer>
+  
+</body>
+</html>

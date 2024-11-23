@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompareHub - Compare 4 Laptops</title>
+    <link rel="shortcut icon" href="./static/logo.ico" type="image/x-icon">
+    <style>
+        
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #0078b7;
+    height: 80px;
+    color: #fff;
+   
+    padding: 20px;
+    
+}
+
+
+
+header h1 {
+    font-family:monospace ;
+    padding-top: 15px;
+    text-align: left;
+    font-size: 49px;
+}
+
+
+.search input[type=text] {
+    float: right;
+    padding: 6px;
+    border:none;
+    
+    margin-top: -18px;
+    margin-right: 16px;
+    font-size: 17px;
+  
+  }
+
+  .heading {
+    text-align: center;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    overflow: hidden; /* Hide overflowed content */
+    font-family: sans-serif;
+    color: #cb3a27;
+    font-size: 13.5px;
+}
+
+
+ 
+
+.vs {
+
+   
+   
+    margin: 0 20px;
+}
+
+
+
+
+footer
+{
+    margin-top: 9.15%;
+    background-color: #3e3e3e;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+table
+{
+     margin-top: -19.2%;
+    margin-left: 14%;
+    margin-right: 20%;
+    width: 83.5%;
+    height: 100%;
+}
+
+
+
+
+table
+{
+    border-collapse:collapse;
+    text-align:center;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+
+.hed{font-family: Titillium,sans-serif;
+    padding-left: 7px;
+    padding-top: 5px;
+    
+    background-color: #f1f1f1;
+    color: #cb3a27;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+    border: solid;
+    border-width: 1px 1px ;
+   width: 100%;
+    text-align: left;
+    border-color: rgb(207, 207, 207);
+    text-transform: capitalize;
+    background-color: #f1f1f1;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.spec
+{
+    text-align: left;
+    font-size: 16px;
+    padding-top:5px ;
+    padding-bottom: 5px;
+    width:16%;
+    padding-left: 7px;
+    
+}
+
+td
+{   padding-left: 12px;
+    padding-right: 12px;
+    width: 20.5%;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-color: #c9c9c9;
+
+}
+
+
+
+.img {
+   
+
+      display: inline;
+    padding-left: 69px;
+    margin-left: 28.5%;
+    
+   
+}
+
+.con{
+
+    padding-top: 3%;
+    padding-right: 130px ;
+    width: 120px;
+    height: 150px;
+   
+    margin: auto;
+}
+.boxxx{
+    margin-top: 5%;
+
+}
+
+.checkbox-container {
+
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    margin-bottom: 13px;
+
+}
+
+/* Set a specific width for labels and checkboxes */
+label {
+    font-family: sans-serif;
+    color: #cb3a27;
+    font-size: 16px;
+
+    flex-basis: 10%; /* Adjust this value to control the width of the labels */
+}
+
+input[type="checkbox"] {
+    flex-basis: -30%; /* Adjust this value to control the width of the checkboxes */
+}
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CompareHub.com</h1>
+ 
+        <!-- <div class="search">
+            <input class="search" type="text" placeholder="Gadgets Search..">
+        </div>  -->
+    
+    </header>
+    <main>
+
+
+        <div class="heading">
+            <h2 class="lap" id="mobile1Name">{{ mobile_data[0][0] }}</h2>
+            <h2 class="vs">Vs</h2>
+            <h2 class="lap" id="mobile2Name">{{ mobile_data[1][0] }}</h2>
+            <h2 class="vs">Vs</h2>
+            <h2 class="lap" id="mobile3Name">{{ mobile_data[2][0] }}</h2>
+            <h2 class="vs">Vs</h2>
+            <h2 class="lap" id="mobile4Name">{{ mobile_data[3][0] }}</h2>
+ </div>
+
+
+<div class="img">
+
+<img class="con" src="{{ mobile_data[0][62] }}">
+<img class="con" src="{{ mobile_data[1][62] }}">
+<img class="con" src="{{ mobile_data[2][62] }}">
+    <img class="con" src="{{ mobile_data[3][62] }}">
+
+</div>
+
+<div class="boxxx">
+
+<div class="checkbox-container">
+    <label for="generalInfoCheckbox">General Info</label>
+    <input type="checkbox" id="generalInfoCheckbox" checked>
+</div>
+ <div class="checkbox-container">
+    <label for="batteryCheckbox">Battery</label>
+    <input type="checkbox" id="batteryCheckbox" checked>
+</div>
+ <div class="checkbox-container">
+    <label for="cameraCheckbox">Camera</label>
+    <input type="checkbox" id="cameraCheckbox" checked>
+</div>
+ <div class="checkbox-container">
+    <label for="designCheckbox">Design</label>
+    <input type="checkbox" id="designCheckbox" checked>
+</div>
+<div class="checkbox-container">
+    <label for="displayCheckbox">Display</label>
+    <input type="checkbox" id="displayCheckbox" checked>
+</div>
+<div class="checkbox-container">
+    <label for="multimediaCheckbox">Multimedia</label>
+    <input type="checkbox" id="multimediaCheckbox" checked>
+</div>
+ <div class="checkbox-container">
+    <label for="networkingCheckbox">Network</label>
+    <input type="checkbox" id="networkingCheckbox" checked>
+</div>
+<div class="checkbox-container">
+    <label for="performanceCheckbox">Networking</label>
+    <input type="checkbox" id="performanceCheckbox" checked>
+</div>
+<div class="checkbox-container">
+    <label for="storageCheckbox">Storage</label>
+    <input type="checkbox" id="storageCheckbox" checked>
+</div>
+
+
+
+</div>
+
+<table border="1">
+     <tr class="general-info-row">
+        <td colspan="5" class="hed">General Info</td>
+    </tr>
+     <tr class="general-info-row">
+        <td class="spec">Mobile Name</td>
+        <td>{{ mobile_data[0][0] }}</td>
+        <td>{{ mobile_data[1][0] }}</td>
+        <td>{{ mobile_data[2][0] }}</td>
+        <td>{{ mobile_data[3][0] }}</td>
+    </tr>
+     <tr class="general-info-row">
+        <td class="spec">Brand</td>
+        <td>{{ mobile_data[0][1] }}</td>
+        <td>{{ mobile_data[1][1] }}</td>
+        <td>{{ mobile_data[2][1] }}</td>
+        <td>{{ mobile_data[3][1] }}</td>
+    </tr>
+     <tr class="general-info-row">
+        <td class="spec">Colours</td>
+        <td>{{ mobile_data[0][2] }}</td>
+        <td>{{ mobile_data[1][2] }}</td>
+        <td>{{ mobile_data[2][2] }}</td>
+        <td>{{ mobile_data[3][2] }}</td>
+    </tr>
+     <tr class="general-info-row">
+        <td class="spec">Operating System</td>
+        <td>{{ mobile_data[0][3] }}</td>
+        <td>{{ mobile_data[1][3] }}</td>
+        <td>{{ mobile_data[2][3] }}</td>
+        <td>{{ mobile_data[3][3] }}</td>
+    </tr>
+        <tr class="general-info-row">
+        <td class="spec">Processor</td>
+        <td>{{ mobile_data[0][8] }}</td>
+        <td>{{ mobile_data[1][8] }}</td>
+        <td>{{ mobile_data[2][8] }}</td>
+        <td>{{ mobile_data[3][8] }}</td>
+    </tr>
+     <tr class="general-info-row">
+        <td class="spec">Weight</td>
+        <td>{{ mobile_data[0][4] }}</td>
+        <td>{{ mobile_data[1][4] }}</td>
+        <td>{{ mobile_data[2][4] }}</td>
+        <td>{{ mobile_data[3][4] }}</td>
+    </tr>
+     <tr class="general-info-row">
+        <td class="spec">Fingerprint Sensor</td>
+        <td>{{ mobile_data[0][5] }}</td>
+        <td>{{ mobile_data[1][5] }}</td>
+        <td>{{ mobile_data[2][5] }}</td>
+        <td>{{ mobile_data[3][5] }}</td>
+    </tr>
+     <tr class="general-info-row">
+        <td class="spec">Launch Date</td>
+        <td>{{ mobile_data[0][6] }}</td>
+        <td>{{ mobile_data[1][6] }}</td>
+        <td>{{ mobile_data[2][6] }}</td>
+        <td>{{ mobile_data[3][6] }}</td>
+    </tr>
+     <tr class="battery-row">
+        <td colspan="5" class="hed">Battery</td>
+    </tr>
+     <tr class="battery-row">
+        <td class="spec">Battery</td>
+        <td>{{ mobile_data[0][7] }}</td>
+        <td>{{ mobile_data[1][7] }}</td>
+        <td>{{ mobile_data[2][7] }}</td>
+        <td>{{ mobile_data[3][7] }}</td>
+    </tr>
+
+     <tr class="battery-row">
+        <td class="spec">Wireless Charging</td>
+        <td>{{ mobile_data[0][9] }}</td>
+        <td>{{ mobile_data[1][9] }}</td>
+        <td>{{ mobile_data[2][9] }}</td>
+        <td>{{ mobile_data[3][9] }}</td>
+    </tr>
+      <tr class="camera-row">
+        <td colspan="5" class="hed">Camera</td>
+    </tr>
+     <tr class="camera-row">
+        <td class="spec">Rear Camera</td>
+        <td>{{ mobile_data[0][10] }}</td>
+        <td>{{ mobile_data[1][10] }}</td>
+        <td>{{ mobile_data[2][10] }}</td>
+        <td>{{ mobile_data[3][10] }}</td>
+    </tr>
+     <tr class="camera-row">
+        <td class="spec">Front Camera</td>
+        <td>{{ mobile_data[0][11] }}</td>
+        <td>{{ mobile_data[1][11] }}</td>
+        <td>{{ mobile_data[2][11] }}</td>
+        <td>{{ mobile_data[3][11] }}</td>
+    </tr>
+     <tr class="camera-row">
+        <td class="spec">Camera Sensor</td>
+        <td>{{ mobile_data[0][12] }}</td>
+        <td>{{ mobile_data[1][12] }}</td>
+        <td>{{ mobile_data[2][12] }}</td>
+        <td>{{ mobile_data[3][12] }}</td>
+    </tr>
+     <tr class="camera-row">
+        <td class="spec">Camera Settings</td>
+        <td>{{ mobile_data[0][13] }}</td>
+        <td>{{ mobile_data[1][13] }}</td>
+        <td>{{ mobile_data[2][13] }}</td>
+        <td>{{ mobile_data[3][13] }}</td>
+    </tr>
+     <tr class="camera-row">
+        <td class="spec">Image Resolution</td>
+        <td>{{ mobile_data[0][14] }}</td>
+        <td>{{ mobile_data[1][14] }}</td>
+        <td>{{ mobile_data[2][14] }}</td>
+        <td>{{ mobile_data[3][14] }}</td>
+    </tr>
+     <tr class="camera-row">
+        <td class="spec">Shooting Modes</td>
+        <td>{{ mobile_data[0][15] }}</td>
+        <td>{{ mobile_data[1][15] }}</td>
+        <td>{{ mobile_data[2][15] }}</td>
+        <td>{{ mobile_data[3][15] }}</td>
+    </tr>
+     <tr class="camera-row">
+        <td class="spec">Camera Features</td>
+        <td>{{ mobile_data[0][16] }}</td>
+        <td>{{ mobile_data[1][16] }}</td>
+        <td>{{ mobile_data[2][16] }}</td>
+        <td>{{ mobile_data[3][16] }}</td>
+    </tr>
+     <tr class="camera-row">
+        <td class="spec">Video Recording</td>
+        <td>{{ mobile_data[0][17] }}</td>
+        <td>{{ mobile_data[1][17] }}</td>
+        <td>{{ mobile_data[2][17] }}</td>
+        <td>{{ mobile_data[3][17] }}</td>
+    </tr>
+     <tr class="camera-row">
+        <td class="spec">Camera Setup</td>
+        <td>{{ mobile_data[0][18] }}</td>
+        <td>{{ mobile_data[1][18] }}</td>
+        <td>{{ mobile_data[2][18] }}</td>
+        <td>{{ mobile_data[3][18] }}</td>
+    </tr>
+     <tr class="camera-row">
+        <td class="spec">Resolution</td>
+        <td>{{ mobile_data[0][19] }}</td>
+        <td>{{ mobile_data[1][19] }}</td>
+        <td>{{ mobile_data[2][19] }}</td>
+        <td>{{ mobile_data[3][19] }}</td>
+    </tr>
+     <tr class="camera-row">
+        <td class="spec">Autofocus</td>
+        <td>{{ mobile_data[0][20] }}</td>
+        <td>{{ mobile_data[1][20] }}</td>
+        <td>{{ mobile_data[2][20] }}</td>
+        <td>{{ mobile_data[3][20] }}</td>
+    </tr>
+
+     <tr class="design-row">
+        <td colspan="5" class="hed">Design</td>
+    </tr>
+
+     <tr class="design-row">
+        <td class="spec">Thickness</td>
+        <td>{{ mobile_data[0][21] }}</td>
+        <td>{{ mobile_data[1][21] }}</td>
+        <td>{{ mobile_data[2][21] }}</td>
+        <td>{{ mobile_data[3][21] }}</td>
+    </tr>
+     <tr class="design-row">
+        <td class="spec">Build Material</td>
+        <td>{{ mobile_data[0][22] }}</td>
+        <td>{{ mobile_data[1][22] }}</td>
+        <td>{{ mobile_data[2][22] }}</td>
+        <td>{{ mobile_data[3][22] }}</td>
+    </tr>
+     <tr class="design-row">
+        <td class="spec">Ruggedness</td>
+        <td>{{ mobile_data[0][23] }}</td>
+        <td>{{ mobile_data[1][23] }}</td>
+        <td>{{ mobile_data[2][23] }}</td>
+        <td>{{ mobile_data[3][23] }}</td>
+    </tr>
+     <tr class="design-row">
+        <td class="spec">Waterproof</td>
+        <td>{{ mobile_data[0][24] }}</td>
+        <td>{{ mobile_data[1][24] }}</td>
+        <td>{{ mobile_data[2][24] }}</td>
+        <td>{{ mobile_data[3][24] }}</td>
+    </tr>
+     <tr class="design-row">
+        <td class="spec">Height</td>
+        <td>{{ mobile_data[0][25] }}</td>
+        <td>{{ mobile_data[1][25] }}</td>
+        <td>{{ mobile_data[2][25] }}</td>
+        <td>{{ mobile_data[3][25] }}</td>
+    </tr>
+     <tr class="design-row">
+        <td class="spec">Width</td>
+        <td>{{ mobile_data[0][26] }}</td>
+        <td>{{ mobile_data[1][26] }}</td>
+        <td>{{ mobile_data[2][26] }}</td>
+        <td>{{ mobile_data[3][26] }}</td>
+    </tr>
+
+     <tr class="display-row">
+        <td colspan="5" class="hed">Display</td>
+    </tr>
+
+     <tr class="display-row">
+        <td class="spec">Display</td>
+        <td>{{ mobile_data[0][27] }}</td>
+        <td>{{ mobile_data[1][27] }}</td>
+        <td>{{ mobile_data[2][27] }}</td>
+        <td>{{ mobile_data[3][27] }}</td>
+    </tr>
+     <tr class="display-row">
+        <td class="spec">Display Type</td>
+        <td>{{ mobile_data[0][28] }}</td>
+        <td>{{ mobile_data[1][28] }}</td>
+        <td>{{ mobile_data[2][28] }}</td>
+        <td>{{ mobile_data[3][28] }}</td>
+    </tr>
+     <tr class="display-row">
+        <td class="spec">Bezelless Display</td>
+        <td>{{ mobile_data[0][29] }}</td>
+        <td>{{ mobile_data[1][29] }}</td>
+        <td>{{ mobile_data[2][29] }}</td>
+        <td>{{ mobile_data[3][29] }}</td>
+    </tr>
+     <tr class="display-row">
+        <td class="spec">HDR 10 / HDR+ support</td>
+        <td>{{ mobile_data[0][30] }}</td>
+        <td>{{ mobile_data[1][30] }}</td>
+        <td>{{ mobile_data[2][30] }}</td>
+        <td>{{ mobile_data[3][30] }}</td>
+    </tr>
+     <tr class="display-row">
+        <td class="spec">Touch Screen</td>
+        <td>{{ mobile_data[0][31] }}</td>
+        <td>{{ mobile_data[1][31] }}</td>
+        <td>{{ mobile_data[2][31] }}</td>
+        <td>{{ mobile_data[3][31] }}</td>
+    </tr>
+     <tr class="display-row">
+        <td class="spec">Pixel Density</td>
+        <td>{{ mobile_data[0][32] }}</td>
+        <td>{{ mobile_data[1][32] }}</td>
+        <td>{{ mobile_data[2][32] }}</td>
+        <td>{{ mobile_data[3][32] }}</td>
+    </tr>
+     <tr class="display-row">
+        <td class="spec">Brightness</td>
+        <td>{{ mobile_data[0][33] }}</td>
+        <td>{{ mobile_data[1][33] }}</td>
+        <td>{{ mobile_data[2][33] }}</td>
+        <td>{{ mobile_data[3][33] }}</td>
+    </tr>
+     <tr class="display-row">
+        <td class="spec">Screen Size</td>
+        <td>{{ mobile_data[0][34] }}</td>
+        <td>{{ mobile_data[1][34] }}</td>
+        <td>{{ mobile_data[2][34] }}</td>
+        <td>{{ mobile_data[3][34] }}</td>
+    </tr>
+     <tr class="display-row">
+        <td class="spec">Refresh Rate</td>
+        <td>{{ mobile_data[0][35] }}</td>
+        <td>{{ mobile_data[1][35] }}</td>
+        <td>{{ mobile_data[2][35] }}</td>
+        <td>{{ mobile_data[3][35] }}</td>
+    </tr>
+     <tr class="display-row">
+        <td class="spec">Aspect Ratio</td>
+        <td>{{ mobile_data[0][36] }}</td>
+        <td>{{ mobile_data[1][36] }}</td>
+        <td>{{ mobile_data[2][36] }}</td>
+        <td>{{ mobile_data[3][36] }}</td>
+    </tr>
+     <tr class="display-row">
+        <td class="spec">Screen to Body Ratio (calculated)</td>
+        <td>{{ mobile_data[0][37] }}</td>
+        <td>{{ mobile_data[1][37] }}</td>
+        <td>{{ mobile_data[2][37] }}</td>
+        <td>{{ mobile_data[3][37] }}</td>
+    </tr>
+     <tr class="display-row">
+        <td class="spec">Screen Protection</td>
+        <td>{{ mobile_data[0][38] }}</td>
+        <td>{{ mobile_data[1][38] }}</td>
+        <td>{{ mobile_data[2][38] }}</td>
+        <td>{{ mobile_data[3][38] }}</td>
+    </tr>
+
+     <tr class="multimedia-row">
+        <td colspan="5" class="hed">Multimedia</td>
+    </tr>
+     <tr class="multimedia-row">
+        <td class="spec">Stereo Speakers</td>
+        <td>{{ mobile_data[0][39] }}</td>
+        <td>{{ mobile_data[1][39] }}</td>
+        <td>{{ mobile_data[2][39] }}</td>
+        <td>{{ mobile_data[3][39] }}</td>
+    </tr>
+     <tr class="multimedia-row">
+        <td class="spec">Audio Features</td>
+        <td>{{ mobile_data[0][40] }}</td>
+        <td>{{ mobile_data[1][40] }}</td>
+        <td>{{ mobile_data[2][40] }}</td>
+        <td>{{ mobile_data[3][40] }}</td>
+    </tr>
+     <tr class="multimedia-row">
+        <td class="spec">Audio Jack</td>
+        <td>{{ mobile_data[0][41] }}</td>
+        <td>{{ mobile_data[1][41] }}</td>
+        <td>{{ mobile_data[2][41] }}</td>
+        <td>{{ mobile_data[3][41] }}</td>
+    </tr>
+     <tr class="multimedia-row">
+        <td class="spec">Loudspeaker</td>
+        <td>{{ mobile_data[0][42] }}</td>
+        <td>{{ mobile_data[1][42] }}</td>
+        <td>{{ mobile_data[2][42] }}</td>
+        <td>{{ mobile_data[3][42] }}</td>
+    </tr>
+
+     <tr class="networking-row">
+        <td colspan="5" class="hed">Network & Connectivity</td>
+    </tr>
+
+     <tr class="networking-row">
+        <td class="spec">Wi-Fi Calling</td>
+        <td>{{ mobile_data[0][43] }}</td>
+        <td>{{ mobile_data[1][43] }}</td>
+        <td>{{ mobile_data[2][43] }}</td>
+        <td>{{ mobile_data[3][43] }}</td>
+    </tr>
+     <tr class="networking-row">
+        <td class="spec">SIM Slot(s)</td>
+        <td>{{ mobile_data[0][44] }}</td>
+        <td>{{ mobile_data[1][44] }}</td>
+        <td>{{ mobile_data[2][44] }}</td>
+        <td>{{ mobile_data[3][44] }}</td>
+    </tr>
+     <tr class="networking-row">
+        <td class="spec">SIM Size</td>
+        <td>{{ mobile_data[0][45] }}</td>
+        <td>{{ mobile_data[1][45] }}</td>
+        <td>{{ mobile_data[2][45] }}</td>
+        <td>{{ mobile_data[3][45] }}</td>
+    </tr>
+     <tr class="networking-row">
+        <td class="spec">Network Support</td>
+        <td>{{ mobile_data[0][46] }}</td>
+        <td>{{ mobile_data[1][46] }}</td>
+        <td>{{ mobile_data[2][46] }}</td>
+        <td>{{ mobile_data[3][46] }}</td>
+    </tr>
+     <tr class="networking-row">
+        <td class="spec">VoLTE</td>
+        <td>{{ mobile_data[0][47] }}</td>
+        <td>{{ mobile_data[1][47] }}</td>
+        <td>{{ mobile_data[2][47] }}</td>
+        <td>{{ mobile_data[3][47] }}</td>
+    </tr>
+     <tr class="networking-row">
+        <td class="spec">Bluetooth</td>
+        <td>{{ mobile_data[0][48] }}</td>
+        <td>{{ mobile_data[1][48] }}</td>
+        <td>{{ mobile_data[2][48] }}</td>
+        <td>{{ mobile_data[3][48] }}</td>
+    </tr>
+     <tr class="networking-row">
+        <td class="spec">Wi-Fi</td>
+        <td>{{ mobile_data[0][49] }}</td>
+        <td>{{ mobile_data[1][49] }}</td>
+        <td>{{ mobile_data[2][49] }}</td>
+        <td>{{ mobile_data[3][49] }}</td>
+    </tr>
+     <tr class="networking-row">
+        <td class="spec">Wi-Fi Features</td>
+        <td>{{ mobile_data[0][50] }}</td>
+        <td>{{ mobile_data[1][50] }}</td>
+        <td>{{ mobile_data[2][50] }}</td>
+        <td>{{ mobile_data[3][50] }}</td>
+    </tr>
+     <tr class="networking-row">
+        <td class="spec">USB Connectivity</td>
+        <td>{{ mobile_data[0][51] }}</td>
+        <td>{{ mobile_data[1][51] }}</td>
+        <td>{{ mobile_data[2][51] }}</td>
+        <td>{{ mobile_data[3][51] }}</td>
+    </tr>
+     <tr class="networking-row">
+        <td class="spec">GPS</td>
+        <td>{{ mobile_data[0][52] }}</td>
+        <td>{{ mobile_data[1][52] }}</td>
+        <td>{{ mobile_data[2][52] }}</td>
+        <td>{{ mobile_data[3][52] }}</td>
+    </tr>
+
+     <tr class="performance-row">
+        <td colspan="5" class="hed">Performance</td>
+    </tr>
+
+     <tr class="performance-row">
+        <td class="spec">CPU</td>
+        <td>{{ mobile_data[0][53] }}</td>
+        <td>{{ mobile_data[1][53] }}</td>
+        <td>{{ mobile_data[2][53] }}</td>
+        <td>{{ mobile_data[3][53] }}</td>
+    </tr>
+     <tr class="performance-row">
+        <td class="spec">Fabrication</td>
+        <td>{{ mobile_data[0][54] }}</td>
+        <td>{{ mobile_data[1][54] }}</td>
+        <td>{{ mobile_data[2][54] }}</td>
+        <td>{{ mobile_data[3][54] }}</td>
+    </tr>
+     <tr class="performance-row">
+        <td class="spec">Chipset</td>
+        <td>{{ mobile_data[0][55] }}</td>
+        <td>{{ mobile_data[1][55] }}</td>
+        <td>{{ mobile_data[2][55] }}</td>
+        <td>{{ mobile_data[3][55] }}</td>
+    </tr>
+     <tr class="performance-row">
+        <td class="spec">Graphics</td>
+        <td>{{ mobile_data[0][56] }}</td>
+        <td>{{ mobile_data[1][56] }}</td>
+        <td>{{ mobile_data[2][56] }}</td>
+        <td>{{ mobile_data[3][56] }}</td>
+    </tr>
+     <tr class="performance-row">
+        <td class="spec">Architecture</td>
+        <td>{{ mobile_data[0][57] }}</td>
+        <td>{{ mobile_data[1][57] }}</td>
+        <td>{{ mobile_data[2][57] }}</td>
+        <td>{{ mobile_data[3][57] }}</td>
+    </tr>
+     <tr class="storage-row">
+        <td colspan="5" class="hed">Storage</td>
+    </tr>
+     <tr class="storage-row">
+        <td class="spec">RAM</td>
+        <td>{{ mobile_data[0][58] }}</td>
+        <td>{{ mobile_data[1][58] }}</td>
+        <td>{{ mobile_data[2][58] }}</td>
+        <td>{{ mobile_data[3][58] }}</td>
+    </tr>
+     <tr class="storage-row">
+        <td class="spec">RAM type</td>
+        <td>{{ mobile_data[0][59] }}</td>
+        <td>{{ mobile_data[1][59] }}</td>
+        <td>{{ mobile_data[2][59] }}</td>
+        <td>{{ mobile_data[3][59] }}</td>
+    </tr>
+     <tr class="storage-row">
+        <td class="spec">Internal Memory</td>
+        <td>{{ mobile_data[0][60] }}</td>
+        <td>{{ mobile_data[1][60] }}</td>
+        <td>{{ mobile_data[2][60] }}</td>
+        <td>{{ mobile_data[3][60] }}</td>
+    </tr>
+     <tr class="storage-row">
+        <td class="spec">Expandable Memory</td>
+        <td>{{ mobile_data[0][61] }}</td>
+        <td>{{ mobile_data[1][61] }}</td>
+        <td>{{ mobile_data[2][61] }}</td>
+        <td>{{ mobile_data[3][61] }}</td>
+    </tr>
+</table>
+
+
+
+
+
+
+    </main>
+    <footer>
+        <p>&copy; Copyright CompareHub Limited 2023. All rights reserved.</p>
+    </footer>
+   <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            const generalInfoCheckbox = document.getElementById('generalInfoCheckbox');
+            const batteryCheckbox = document.getElementById('batteryCheckbox');
+            const cameraCheckbox = document.getElementById('cameraCheckbox');
+            const designCheckbox = document.getElementById('designCheckbox');
+            const displayCheckbox = document.getElementById('displayCheckbox');
+            const multimediaCheckbox = document.getElementById('multimediaCheckbox');
+
+             const networkingCheckbox = document.getElementById('networkingCheckbox');
+            const performanceCheckbox = document.getElementById('performanceCheckbox');
+            const storageCheckbox = document.getElementById('storageCheckbox');
+
+            const generalInfoRows = document.querySelectorAll('.general-info-row');
+             const batteryRows = document.querySelectorAll('.battery-row');
+
+            const cameraRows = document.querySelectorAll('.camera-row');
+            const designRows = document.querySelectorAll('.design-row');
+
+            const displayRows = document.querySelectorAll('.display-row');
+            const multimediaRows = document.querySelectorAll('.multimedia-row');
+            const storageRows = document.querySelectorAll('.storage-row');
+            const networkingRows = document.querySelectorAll('.networking-row');
+
+            const performanceRows = document.querySelectorAll('.performance-row');
+            const featuresRows = document.querySelectorAll('.features-row');
+
+            function toggleRows(checkbox, rows) {
+                checkbox.addEventListener('change', function () {
+                    const isVisible = checkbox.checked;
+                    rows.forEach(function (row) {
+                        row.style.display = isVisible ? '' : 'none';
+                    });
+                });
+            }
+
+            toggleRows(generalInfoCheckbox, generalInfoRows);
+            toggleRows( batteryCheckbox,batteryRows );
+             toggleRows(cameraCheckbox, cameraRows);
+              toggleRows(designCheckbox, designRows);
+              toggleRows(displayCheckbox,displayRows );
+              toggleRows(multimediaCheckbox,multimediaRows );
+
+           toggleRows(networkingCheckbox,networkingRows );
+            toggleRows(performanceCheckbox,performanceRows );
+             toggleRows(storageCheckbox, storageRows);
+              });
+</script>
+
+</body>
+</html>
